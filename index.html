@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Yashaswi Alur Prasannakumar - Engineering Management Portfolio | Supply Chain & Product Innovation</title>
+    <meta name="description" content="Engineering Management graduate student at Northeastern University specializing in supply chain optimization, product innovation, and cross-functional team leadership. Co-founder of Cratel startup, MIT Reality Hack winner.">
+    <meta name="author" content="Yashaswi Alur Prasannakumar">
+    <meta name="keywords" content="Engineering Management, Supply Chain, Project Management, Machine Learning, UAV Research, Northeastern University, MIT Reality Hack, Startup Co-founder">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Yashaswi Alur Prasannakumar - Engineering Management Portfolio">
+    <meta property="og:description" content="Engineering Management graduate student specializing in supply chain optimization and product innovation">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yashaswi-portfolio.com">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yashaswi Alur Prasannakumar - Engineering Management Portfolio">
+    <meta name="twitter:description" content="Engineering Management graduate student specializing in supply chain optimization and product innovation">
+
+    <style>
+        :root {
+            /* Light mode colors */
+            --primary-color: #3498db;
+            --secondary-color: #2980b9;
+            --accent-color: #9b59b6;
+            --text-primary: #2c3e50;
+            --text-secondary: #34495e;
+            --text-muted: #7f8c8d;
+            --background-primary: #ffffff;
+            --background-secondary: #f8f9fa;
+            --background-tertiary: #ecf0f1;
+            --border-color: #e0e0e0;
+            --shadow-light: rgba(0, 0, 0, 0.08);
+            --shadow-medium: rgba(0, 0, 0, 0.15);
+            --gradient-primary: linear-gradient(135deg, #3498db, #2980b9);
+            --gradient-accent: linear-gradient(135deg, #9b59b6, #8e44ad);
+        }
+
+        /* Dark mode colors */
+        [data-theme="dark"] {
+            --primary-color: #74b9ff;
+            --secondary-color: #0984e3;
+            --accent-color: #a29bfe;
+            --text-primary: #ddd;
+            --text-secondary: #bbb;
+            --text-muted: #888;
+            --background-primary: #2d3436;
+            --background-secondary: #636e72;
+            --background-tertiary: #74b9ff;
+            --border-color: #636e72;
+            --shadow-light: rgba(0, 0, 0, 0.3);
+            --shadow-medium: rgba(0, 0, 0, 0.5);
+            --gradient-primary: linear-gradient(135deg, #74b9ff, #0984e3);
+            --gradient-accent: linear-gradient(135deg, #a29bfe, #6c5ce7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--background-secondary);
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--background-primary);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--primary-color);
+            box-shadow: 0 2px 10px var(--shadow-light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-item {
+            cursor: pointer;
+            padding: 0.6rem 1.2rem;
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            color: var(--background-primary);
+            background: var(--gradient-primary);
+            transform: translateY(-2px);
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: var(--gradient-primary);
+            border: none;
+            padding: 0.5rem;
+            border-radius: 50%;
+            cursor: pointer;
+            color: white;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover {
+            transform: rotate(180deg) scale(1.1);
+        }
+
+        /* Page Transitions */
+        .page {
+            display: none;
+            background-color: var(--background-primary);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px var(--shadow-light);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+
+        .page.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            animation: fadeInUp 0.6s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .page h1 {
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            font-size: 2.4rem;
+            font-weight: 700;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .page h2 {
+            color: var(--text-secondary);
+            margin: 2rem 0 1rem 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .page h3 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 0.5rem 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        /* About Page */
+        .about-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .profile-section {
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 220px;
+            height: 220px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: var(--background-primary);
+            font-size: 2.2rem;
+            font-weight: 600;
+            box-shadow: 0 6px 25px var(--shadow-medium);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.05);
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        .location {
+            background: var(--gradient-accent);
+            color: var(--background-primary);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+
+        /* Download Resume Button */
+        .resume-button {
+            background: var(--gradient-primary);
+            color: var(--background-primary);
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .resume-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow-medium);
+        }
+
+        /* Case Study Specific Styles */
+        .case-study-item {
+            margin: 2rem 0;
+            padding: 2.5rem;
+            background-color: var(--background-secondary);
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-color);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-study-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: var(--gradient-primary);
+            opacity: 0.1;
+            border-radius: 50%;
+            transform: translate(30%, -30%);
+        }
+
+        .case-study-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--shadow-medium);
+            border-left-color: var(--secondary-color);
+        }
+
+        .case-study-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .case-study-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .case-study-company {
+            color: var(--text-primary);
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .case-study-section {
+            margin: 1.5rem 0;
+        }
+
+        .case-study-section h4 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .case-study-content {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            padding-left: 1.5rem;
+        }
+
+        .findings-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .findings-list li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .findings-list li:last-child {
+            border-bottom: none;
+        }
+
+        .findings-list li:before {
+            content: "💡";
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+        }
+
+        .recommendations-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .recommendations-list li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .recommendations-list li:last-child {
+            border-bottom: none;
+        }
+
+        .recommendations-list li:before {
+            content: "🎯";
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+        }
+
+        .impact-highlight {
+            background: var(--gradient-accent);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+
+        .item-title {
+            color: var(--text-primary);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .item-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .item-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+
+        .item-list li {
+            padding: 0.4rem 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .item-list li:before {
+            content: "▸";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Tech Stack Badges */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-badge {
+            background: var(--gradient-primary);
+            color: var(--background-primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Project Filters */
+        .project-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: var(--background-secondary);
+            color: var(--text-secondary);
+            border: 2px solid var(--border-color);
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--gradient-primary);
+            color: var(--background-primary);
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            padding: 2rem;
+            background: var(--background-secondary);
+            border-radius: 10px;
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-category h3 {
+            margin-top: 0;
+            margin-bottom: 1.2rem;
+            color: var(--text-primary);
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-list li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .skill-list li:hover {
+            color: var(--primary-color);
+        }
+
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Project Icons */
+        .project-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--background-primary);
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px var(--shadow-medium);
+            transition: transform 0.3s ease;
+        }
+
+        .project-icon:hover {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-title-section {
+            flex: 1;
+        }
+
+        /* Experience Timeline */
+        .experience-timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: var(--background-secondary);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px var(--shadow-light);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.8rem;
+            top: 2rem;
+            width: 12px;
+            height: 12px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            border: 3px solid var(--background-primary);
+        }
+
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            padding: 2rem;
+            background: var(--gradient-primary);
+            color: var(--background-primary);
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px var(--shadow-medium);
+            cursor: pointer;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 8px 30px var(--shadow-medium);
+        }
+
+        .contact-item h3 {
+            color: var(--background-primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-item a {
+            color: var(--background-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Publications */
+        .publication-item {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: var(--background-primary);
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(116, 185, 255, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .publication-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .publication-title {
+            color: var(--background-primary);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-venue {
+            color: var(--background-primary);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .publication-item .item-list li {
+            color: var(--background-primary);
+        }
+
+        .publication-item .item-list li:before {
+            color: var(--background-primary);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: var(--background-secondary);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            box-shadow: 0 4px 15px var(--shadow-light);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            background: var(--background-primary);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--gradient-primary);
+            color: var(--background-primary);
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow-medium);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .nav-container {
+                gap: 0.8rem;
+            }
+
+            .nav-menu {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .page {
+                padding: 2rem 1.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .profile-photo {
+                width: 180px;
+                height: 180px;
+                font-size: 1.8rem;
+            }
+
+            .page h1 {
+                font-size: 2rem;
+            }
+
+            .skills-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-photo {
+                height: 140px;
+                font-size: 1.1rem;
+            }
+
+            .project-filters {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .experience-timeline {
+                padding-left: 1rem;
+            }
+
+            .timeline-item::before {
+                left: -0.8rem;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid var(--border-color);
+            border-radius: 50%;
+            border-top-color: var(--primary-color);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Scroll to top button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--gradient-primary);
+            color: var(--background-primary);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav-container">
+                <div class="logo">Yashaswi Alur Prasannakumar</div>
+                <ul class="nav-menu">
+                    <li class="nav-item active" onclick="showPage('about')">About</li>
+                    <li class="nav-item" onclick="showPage('projects')">Projects & Skills</li>
+                    <li class="nav-item" onclick="showPage('experience')">Experience</li>
+                    <li class="nav-item" onclick="showPage('casestudies')">Case Studies</li>
+                    <li class="nav-item" onclick="showPage('contact')">Contact</li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Page 1: About -->
+        <div id="about-page" class="page active">
+            <h1>About Me</h1>
+            <div class="about-content">
+                <div class="content-section">
+                    <p class="intro-text">
+                        Ever since my school days, I've been drawn to taking initiative and leading teams. From being elected class representative in middle school to organizing community service drives, I discovered early on that bringing people together toward a common goal is my passion.
+                    </p>
+                    <p class="intro-text">
+                        Now, as a results-driven Engineering Management graduate student at Northeastern University, I'm blending my technical foundation in electronics with advanced training in operations and project management. This multidisciplinary background in electronics, supply chain, product design, and research allows me to build scalable systems, drive product innovation, and lead cross-functional teams to execute impactful solutions.
+                    </p>
+                    <p class="intro-text">
+                        My journey spans co-founding a startup, conducting award-winning research, and managing diverse teams. I thrive at the intersection of engineering and business strategy, turning innovative ideas into tangible outcomes. Whether it's engineering a prototype in 48 hours or orchestrating a 1,000-member event, I love tackling complex challenges with creativity and leadership.
+                    </p>
+
+                    <h2>Education</h2>
+                    <div class="content-item visible">
+                        <div class="item-title">🎓 Master of Science in Engineering Management</div>
+                        <div class="item-subtitle">Northeastern University, Boston, MA | Expected May 2026 | GPA: 3.75</div>
+                        <div class="item-description">
+                            Currently pursuing my master's in Engineering Management, concentrating on Supply Chain Engineering, Project Management, and Operations Research. This program is honing my ability to apply engineering insight alongside managerial strategy. Through courses like Economic Decision Making and Operations Research, I'm learning to optimize complex systems and make data-informed decisions in real-world scenarios.
+                        </div>
+                        <p><strong>Concentrations:</strong> Supply Chain Engineering, Project Management, Operations Research</p>
+                    </div>
+
+                    <div class="content-item visible">
+                        <div class="item-title">🎓 Bachelor of Technology in Electronics & Communication Engineering</div>
+                        <div class="item-subtitle">PES University, Bengaluru, India | Class of 2024</div>
+                        <div class="item-description">
+                            My undergraduate education provided a rigorous foundation in engineering principles, from signal processing and robotics to applied mathematics. During my B.Tech in ECE, I not only excelled in coursework but also engaged in research and leadership outside the classroom. This experience taught me to balance technical problem-solving with team coordination and sparked my interest in management.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <div class="profile-photo">
+                        YAP
+                    </div>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Professional Initials</p>
+                    <div class="location">📍 Boston, MA</div>
+                    <p style="margin-top: 1rem; color: var(--text-secondary); font-weight: 500;">Open to Co-op & Internship Opportunities</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 2: Projects & Skills -->
+        <div id="projects-page" class="page">
+            <h1>Projects & Skills</h1>
+            
+            <div class="project-filters">
+                <button class="filter-btn active" onclick="filterProjects('all')">All Projects</button>
+                <button class="filter-btn" onclick="filterProjects('ml')">ML Projects</button>
+                <button class="filter-btn" onclick="filterProjects('research')">Research</button>
+                <button class="filter-btn" onclick="filterProjects('hackathon')">Hackathons</button>
+                <button class="filter-btn" onclick="filterProjects('automation')">Automation</button>
+            </div>
+
+            <h2>Featured Projects</h2>
+            
+            <div class="content-item project-item" data-category="hackathon">
+                <div class="project-header">
+                    <div class="project-icon">🥽</div>
+                    <div class="project-title-section">
+                        <div class="item-title">"Spidey Sense" – Haptic VR Accessibility Device</div>
+                        <div class="item-subtitle">MIT Reality Hack 2025 | Project Manager | Team of 5 | 48-hour Hackathon</div>
+                    </div>
+                </div>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">ESP32</span>
+                    <span class="tech-badge">C++</span>
+                    <span class="tech-badge">VR Development</span>
+                    <span class="tech-badge">Hardware Design</span>
+                    <span class="tech-badge">Bluetooth LE</span>
+                    <span class="tech-badge">Meta Quest 3</span>
+                </div>
+
+                <div class="item-description">
+                    Led a team of five in developing an innovative haptic navigation device at MIT's Reality Hack 2025. This project addressed the question: How can we make virtual reality accessible to visually impaired users? Our solution was a wearable system providing real-time spatial awareness through touch feedback, using Meta Quest 3's cameras and sensors to map surroundings and translate obstacles into distinctive vibration patterns.
+                </div>
+
+                <h3>Technical Achievement</h3>
+                <ul class="item-list">
+                    <li>Built hardware around ESP32 microcontroller controlling custom pancake vibration motors via DRV8833 drivers</li>
+                    <li>Achieved wireless integration with VR headset using Bluetooth Low Energy</li>
+                    <li>Reduced feedback latency to under 50 milliseconds for near-instantaneous experience</li>
+                    <li>Coordinated component sourcing from three different suppliers within 24 hours under extreme deadline</li>
+                </ul>
+
+                <h3>Impact & Recognition</h3>
+                <ul class="item-list">
+                    <li><strong>Award:</strong> Won "Jaw-Dropping Award" in Hardware Track from 100+ international teams</li>
+                    <li><strong>User Impact:</strong> 95% improvement in navigation confidence among visually impaired test users</li>
+                    <li><strong>Innovation:</strong> Patent application initiated for haptic feedback algorithm</li>
+                    <li>Demonstrated to judges from MIT, Meta, and accessibility organizations</li>
+                </ul>
+            </div>
+
+            <div class="content-item project-item" data-category="automation">
+                <div class="project-header">
+                    <div class="project-icon">🏭</div>
+                    <div class="project-title-section">
+                        <div class="item-title">Warehouse Automation Optimization</div>
+                        <div class="item-subtitle">Northeastern University | Jan – Mar 2025 | Supply Chain Engineering Course Project</div>
+                    </div>
+                </div>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">Operations Research</span>
+                    <span class="tech-badge">AGV Systems</span>
+                    <span class="tech-badge">WMS</span>
+                    <span class="tech-badge">Process Optimization</span>
+                    <span class="tech-badge">ROI Analysis</span>
+                </div>
+
+                <div class="item-description">
+                    Comprehensive analysis and redesign of a mid-sized e-commerce warehouse operation handling 50,000+ orders monthly. The goal was exploring how automation could boost efficiency without completely replacing the human workforce, creating optimal human-machine collaboration.
+                </div>
+
+                <h3>Methodology & Analysis</h3>
+                <ul class="item-list">
+                    <li>Conducted time-motion studies and bottleneck analyses across 15 operational zones</li>
+                    <li>Evaluated automation technologies with ROI calculations for AGVs, robotic picking, and WMS systems</li>
+                    <li>Performed vendor comparison of 8 automation solution providers</li>
+                    <li>Designed hybrid automation solution with 12 AGVs for heavy lifting and humans for complex tasks</li>
+                </ul>
+
+                <h3>Business Impact</h3>
+                <ul class="item-list">
+                    <li><strong>Efficiency:</strong> 25% increase in operational efficiency with 18-month payback period</li>
+                    <li><strong>Cost Savings:</strong> $280K annual savings through labor optimization and error reduction</li>
+                    <li><strong>Layout Optimization:</strong> 40% reduction in average pick-walk distance</li>
+                    <li><strong>Scalability:</strong> System designed to handle 150% capacity increase with minimal additional investment</li>
+                </ul>
+            </div>
+
+            <div class="content-item project-item" data-category="research">
+                <div class="project-header">
+                    <div class="project-icon">🔥</div>
+                    <div class="project-title-section">
+                        <div class="item-title">FireTamer: Simulated Drone-Based Controlled Burning System for Wildfire Management</div>
+                        <div class="item-subtitle">PES University | Aug 2022 – Mar 2023 | Wildfire Simulation Research Project</div>
+                    </div>
+                </div>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">Unity 3D</span>
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">OpenCV</span>
+                    <span class="tech-badge">Fuzzy Logic</span>
+                    <span class="tech-badge">Simulated IR Sensors</span>
+                    <span class="tech-badge">Drone Flight Simulation</span>
+                </div>
+
+                <div class="item-description">
+                    FireTamer is a simulation-based research project that explores how autonomous drones can contain large-scale forest fires using controlled burns. The concept leverages low-intensity fire drops to eliminate flammable material in a targeted path, effectively redirecting or halting more dangerous fires. The project demonstrates how fire behavior can be predicted and influenced using AI-driven decision systems and drone path planning.
+                </div>
+
+                <h3>Technical Implementation (Simulated)</h3>
+                <ul class="item-list">
+                    <li><strong>Fire Spread Modeling:</strong> Simulated forest environments with varying terrain and vegetation density in Unity 3D</li>
+                    <li><strong>Drone Flight Path Design:</strong> Implemented drone path logic to deliver controlled burns in strategic zones based on sensor data inputs</li>
+                    <li><strong>Fire Detection Algorithm:</strong> Used OpenCV and mock thermal imaging data to simulate fire boundary detection</li>
+                    <li><strong>Controlled Burn Logic:</strong> Applied fuzzy logic rules to decide when and where to deploy small-scale fires based on predicted spread patterns</li>
+                    <li><strong>Environmental Feedback Loop:</strong> Integrated wind direction, heat signatures, and terrain slope into dynamic simulation</li>
+                    <li><strong>Visualization:</strong> Created real-time 3D visual outputs to monitor drone response and fire suppression in action</li>
+                </ul>
+
+                <h3>Impact & Outcomes</h3>
+                <ul class="item-list">
+                    <li><strong>Proof of Concept:</strong> Demonstrated feasibility of using drones for fire redirection via controlled burning in simulated environment</li>
+                    <li><strong>Containment Success:</strong> Achieved 60% reduction in fire spread in simulation when using proactive burn lines</li>
+                    <li><strong>Innovation:</strong> Highlights how simulation-based research can support safer, more scalable wildfire strategies using automation</li>
+                    <li><strong>Scalability Potential:</strong> Framework can be extended to multi-drone coordination and real-world IoT integration</li>
+                </ul>
+            </div>
+
+            <div class="content-item project-item" data-category="research">
+                <div class="project-header">
+                    <div class="project-icon">🔥</div>
+                    <div class="project-title-section">
+                        <div class="item-title">FireTamer: Simulated Drone-Based Controlled Burning System for Wildfire Management</div>
+                        <div class="item-subtitle">PES University | Aug 2022 – Mar 2023 | Wildfire Simulation Research Project</div>
+                    </div>
+                </div>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">Unity 3D</span>
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">OpenCV</span>
+                    <span class="tech-badge">Fuzzy Logic</span>
+                    <span class="tech-badge">Simulated IR Sensors</span>
+                    <span class="tech-badge">Drone Flight Simulation</span>
+                </div>
+
+                <div class="item-description">
+                    FireTamer is a simulation-based research project that explores how autonomous drones can contain large-scale forest fires using controlled burns. The concept leverages low-intensity fire drops to eliminate flammable material in a targeted path, effectively redirecting or halting more dangerous fires. The project demonstrates how fire behavior can be predicted and influenced using AI-driven decision systems and drone path planning.
+                </div>
+
+                <h3>Technical Implementation (Simulated)</h3>
+                <ul class="item-list">
+                    <li><strong>Fire Spread Modeling:</strong> Simulated forest environments with varying terrain and vegetation density in Unity 3D</li>
+                    <li><strong>Drone Flight Path Design:</strong> Implemented drone path logic to deliver controlled burns in strategic zones based on sensor data inputs</li>
+                    <li><strong>Fire Detection Algorithm:</strong> Used OpenCV and mock thermal imaging data to simulate fire boundary detection</li>
+                    <li><strong>Controlled Burn Logic:</strong> Applied fuzzy logic rules to decide when and where to deploy small-scale fires based on predicted spread patterns</li>
+                    <li><strong>Environmental Feedback Loop:</strong> Integrated wind direction, heat signatures, and terrain slope into dynamic simulation</li>
+                    <li><strong>Visualization:</strong> Created real-time 3D visual outputs to monitor drone response and fire suppression in action</li>
+                </ul>
+
+                <h3>Impact & Outcomes</h3>
+                <ul class="item-list">
+                    <li><strong>Proof of Concept:</strong> Demonstrated feasibility of using drones for fire redirection via controlled burning in simulated environment</li>
+                    <li><strong>Containment Success:</strong> Achieved 60% reduction in fire spread in simulation when using proactive burn lines</li>
+                    <li><strong>Innovation:</strong> Highlights how simulation-based research can support safer, more scalable wildfire strategies using automation</li>
+                    <li><strong>Scalability Potential:</strong> Framework can be extended to multi-drone coordination and real-world IoT integration</li>
+                </ul>
+            </div>
+
+            <div class="content-item project-item" data-category="research">
+                <div class="project-header">
+                    <div class="project-icon">🚁</div>
+                    <div class="project-title-section">
+                        <div class="item-title">Digital Twin of Unmanned Aerial Vehicles</div>
+                        <div class="item-subtitle">PES University | March 2023 – May 2024 | Research Project</div>
+                    </div>
+                </div>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">ROS</span>
+                    <span class="tech-badge">Unity 3D</span>
+                    <span class="tech-badge">Machine Learning</span>
+                    <span class="tech-badge">LiDAR</span>
+                    <span class="tech-badge">Real-time Systems</span>
+                    <span class="tech-badge">Kafka</span>
+                </div>
+
+                <div class="item-description">
+                    Developed a comprehensive digital twin framework for UAVs - essentially a real-time virtual replica that mirrors every operation and condition. By feeding the twin with live sensor data from the physical UAV, we can simulate and predict drone behavior under various scenarios without risking the actual device.
+                </div>
+
+                <h3>Technical Implementation</h3>
+                <ul class="item-list">
+                    <li>Integrated ROS for sensor fusion from IMU, GPS, LiDAR, and camera feeds</li>
+                    <li>Built physics-accurate virtual environment in Unity with sub-100ms latency</li>
+                    <li>Implemented real-time weather integration and dynamic obstacle detection</li>
+                    <li>Developed ML models for battery performance and component wear prediction</li>
+                </ul>
+
+                <h3>Research Impact</h3>
+                <ul class="item-list">
+                    <li><strong>Accuracy:</strong> 95% accuracy in flight parameter prediction, 88% in failure prediction</li>
+                    <li><strong>Validation:</strong> 500+ virtual flight hours across different scenarios</li>
+                    <li><strong>Publication:</strong> Research paper submitted to IEEE Transactions on Aerospace and Electronic Systems</li>
+                    <li>Field tested on three different UAV platforms for model validation</li>
+                </ul>
+            </div>
+
+            <div class="content-item project-item" data-category="ml">
+                <div class="project-header">
+                    <div class="project-icon">📈</div>
+                    <div class="project-title-section">
+                        <div class="item-title">Stock Market & Credit Analysis Using Advanced Time Series Modeling</div>
+                        <div class="item-subtitle">PES University | March – April 2023 | Financial Analytics Project</div>
+                    </div>
+                </div>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">ARIMA</span>
+                    <span class="tech-badge">GARCH</span>
+                    <span class="tech-badge">Hidden Markov Models</span>
+                    <span class="tech-badge">Time Series</span>
+                    <span class="tech-badge">Financial Analytics</span>
+                </div>
+
+                <div class="item-description">
+                    Developed comprehensive financial analysis system using advanced statistical models to predict quarterly stock market trends and assess corporate credit risk, focusing on emerging markets and volatile sectors.
+                </div>
+
+                <h3>Technical Approach</h3>
+                <ul class="item-list">
+                    <li>Analyzed 15-year historical data from NSE, BSE covering 200+ stocks across 12 sectors</li>
+                    <li>Implemented ARIMA models with grid search across 1000+ parameter configurations</li>
+                    <li>Used Hidden Markov Models for regime detection (bull/bear market phases)</li>
+                    <li>Applied GARCH models for volatility estimation and risk assessment</li>
+                </ul>
+
+                <h3>Performance Results</h3>
+                <ul class="item-list">
+                    <li><strong>Prediction Accuracy:</strong> 78% accuracy in quarterly trend prediction (15% above random walk)</li>
+                    <li><strong>Portfolio Performance:</strong> Sharpe ratio of 1.2 on backtested strategies</li>
+                    <li><strong>Credit Risk:</strong> 85% accuracy in identifying defaults 6 months in advance</li>
+                    <li>Walk-forward validation ensuring realistic performance assessment</li>
+                </ul>
+            </div>
+
+            <div class="content-item project-item" data-category="ml">
+                <div class="project-header">
+                    <div class="project-icon">🚗</div>
+                    <div class="project-title-section">
+                        <div class="item-title">Intelligent Used Car Price Prediction System</div>
+                        <div class="item-subtitle">PES University | June 2022 | ML & Cloud Computing Project</div>
+                    </div>
+                </div>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">Google Cloud</span>
+                    <span class="tech-badge">Vertex AI</span>
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">AutoML</span>
+                    <span class="tech-badge">REST APIs</span>
+                    <span class="tech-badge">Apache Airflow</span>
+                </div>
+
+                <div class="item-description">
+                    Created smart system to estimate fair market price of used cars - essentially an AI-powered Blue Book value - deployed on cloud with user-friendly interface including voice accessibility features.
+                </div>
+
+                <h3>System Architecture</h3>
+                <ul class="item-list">
+                    <li>Web scraped 50,000+ vehicle listings from five major automotive platforms</li>
+                    <li>Engineered 25+ features including vehicle specs, market trends, and regional demand</li>
+                    <li>Deployed on Google Cloud Run with auto-scaling capabilities</li>
+                    <li>Integrated voice interface using Cloud Text-to-Speech API for accessibility</li>
+                </ul>
+
+                <h3>Business Impact</h3>
+                <ul class="item-list">
+                    <li><strong>Accuracy:</strong> Mean Absolute Error of ₹25,000 on vehicles ranging ₹2L-₹20L</li>
+                    <li><strong>User Benefit:</strong> Buyers saved average 8% on purchases using tool insights</li>
+                    <li><strong>Scalability:</strong> System processes 1000+ price requests per minute</li>
+                    <li>Daily ETL pipeline with Apache Airflow for fresh market data</li>
+                </ul>
+            </div>
+
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Supply Chain & Quality Management</h3>
+                    <ul class="skill-list">
+                        <li>Strategic Sourcing & Vendor Evaluation</li>
+                        <li>Should-Cost Modeling</li>
+                        <li>Quality Control & Procurement SOPs</li>
+                        <li>Supplier Risk Assessment</li>
+                        <li>Supply Chain Optimization</li>
+                        <li>Vendor Management</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Technical & Analytical</h3>
+                    <ul class="skill-list">
+                        <li>Python (Pandas, NumPy, scikit-learn)</li>
+                        <li>MATLAB & Power BI</li>
+                        <li>Google Cloud (Vertex AI, AutoML)</li>
+                        <li>Machine Learning & Deep Learning</li>
+                        <li>Data Analysis & Visualization</li>
+                        <li>ERP Systems & Advanced Excel</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Project & Product Management</h3>
+                    <ul class="skill-list">
+                        <li>Cross-Functional Team Leadership</li>
+                        <li>Budget Management & Resource Planning</li>
+                        <li>Process Documentation & SOPs</li>
+                        <li>Stakeholder Communication</li>
+                        <li>Timeline Management</li>
+                        <li>Procurement & Vendor Negotiations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Research & Publications</h2>
+            <div class="publication-item">
+                <div class="publication-title">Deep Learning-Based Blockage Prediction for IRS-Aided V2X Networks</div>
+                <div class="publication-venue">Published: WiSPNET 2024 | PES University</div>
+                <div class="item-description">
+                    Explored how machine learning can predict communication blockages in millimeter-wave vehicular networks. Implemented and compared CNN, GRU, and LSTM models using the ViWi dataset, demonstrating how Intelligent Reflecting Surfaces can improve prediction accuracy and signal quality.
+                </div>
+                <ul class="item-list">
+                    <li>Studied CNN, GRU, and LSTM performance for predicting mm-Wave link blockages</li>
+                    <li>Demonstrated minimal IRS element activation improves prediction accuracy and SNR</li>
+                    <li>Validated approach for making vehicular communications more robust</li>
+                </ul>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">IRS-Assisted mm-Wave Blockage Prediction in Vehicular Environments</div>
+                <div class="publication-venue">Research Project | PES University | Aug 2022 – March 2024</div>
+                <div class="item-description">
+                    Follow-up research delving deeper into ML techniques for predicting signal blockages in high-mobility environments. Focus on non-line-of-sight scenarios and how intelligent reflecting surfaces combined with advanced ML models can anticipate obstacles and reroute signals.
+                </div>
+                <ul class="item-list">
+                    <li>Investigating ML algorithms for obstacle prediction in high-mobility V2X networks</li>
+                    <li>Focus on NLOS communication reliability via intelligent reflecting surfaces</li>
+                    <li>Testing model generalization across urban mobility scenarios</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Page 3: Experience -->
+        <div id="experience-page" class="page">
+            <h1>Experience</h1>
+            
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="item-title">Co-Founder & Chief Product Officer</div>
+                    <div class="item-subtitle">Cratel – E-Commerce Supply Chain Startup | Bengaluru, India | June 2023 – April 2024</div>
+                    
+                    <div class="item-description">
+                        Recognizing a major efficiency gap in how products reach consumers, I co-founded Cratel, a B2C e-commerce startup aimed at streamlining the supply chain. As Chief Product Officer, I led the design of a platform that connects producers directly to consumers, effectively reducing middleman costs and lowering consumer prices by about 40%.
+                    </div>
+
+                    <h3>Key Achievements</h3>
+                    <ul class="item-list">
+                        <li><strong>Product Strategy:</strong> Designed B2C platform reducing consumer costs by 40% through direct producer-consumer connections</li>
+                        <li><strong>Operations Optimization:</strong> Implemented process optimizations reducing operational costs by 25%</li>
+                        <li><strong>Should-Cost Modeling:</strong> Developed data-driven models for IoT hardware procurement improving delivery speed</li>
+                        <li><strong>Quality Systems:</strong> Established scalable supplier selection frameworks and quality control procedures</li>
+                        <li><strong>Cross-Functional Leadership:</strong> Managed teams across product development, operations, and vendor relations</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="item-title">Program Manager</div>
+                    <div class="item-subtitle">Office of Dean of Student Affairs, PES University | June 2023 – January 2024</div>
+                    
+                    <div class="item-description">
+                        Managed a wide portfolio of student programs, coordinating logistics and budgets for 50+ student clubs and organizations. Essentially served as the right-hand to the Dean of Student Affairs, overseeing everything from robotics workshops to cultural festivals, ensuring each had the resources and guidance needed to succeed.
+                    </div>
+
+                    <h3>Key Responsibilities & Impact</h3>
+                    <ul class="item-list">
+                        <li><strong>Large-Scale Management:</strong> Directed 1,000+ student volunteers and organized university-wide events for audiences up to 10,000</li>
+                        <li><strong>Budget Oversight:</strong> Managed $350,000+ in annual funding across 50+ student organizations</li>
+                        <li><strong>Process Innovation:</strong> Designed automated event approval system reducing turnaround time by 60%</li>
+                        <li><strong>SOP Development:</strong> Established standardized financial and operational procedures with Dean's office</li>
+                        <li><strong>Stakeholder Management:</strong> Enhanced communication and transparency across student organizations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Leadership & Activities</h2>
+
+            <div class="content-item">
+                <div class="item-title">Community Chair – Intercollegiate XR (ICXR)</div>
+                <div class="item-subtitle">March 2025 – Present</div>
+                <div class="item-description">
+                    Leading the world's premier collegiate extended reality community, coordinating AR/VR initiatives across multiple universities. Responsibilities include organizing collaborative events like multi-campus hackathons, managing industry partnerships, and handling logistics of sharing VR equipment among member clubs. Recently coordinated a joint hackathon involving students from 30+ universities across multiple time zones.
+                </div>
+            </div>
+
+            <div class="content-item">
+                <div class="item-title">Founder – Shunya: The Math Club at PES University</div>
+                <div class="item-subtitle">November 2021 – May 2024</div>
+                
+                <div class="item-description">
+                    Founded Shunya with a vision to create a dynamic community where students could explore applied mathematics beyond traditional curricula. What started as an experiment evolved into one of the most active student-led initiatives on campus, operating across all PES campuses with 200+ active contributors.
+                </div>
+
+                <h3>Major Achievements</h3>
+                <ul class="item-list">
+                    <li><strong>Arithemania 2.0:</strong> Organized 30-hour mathematics hackathon with ₹20 lakh prize pool, attracting national participation</li>
+                    <li><strong>Industry Partnerships:</strong> Secured sponsorships from MathWorks, Wolfram Language, and Echo3D</li>
+                    <li><strong>Research Impact:</strong> Mentored 15 student teams, many resulting in published papers and prototypes</li>
+                    <li><strong>Community Outreach:</strong> Ran programs in government schools using gamified approaches to math education</li>
+                    <li><strong>Campus Expansion:</strong> Extended Shunya's presence to Electronic City campus in 2023</li>
+                </ul>
+            </div>
+
+            <div class="content-item">
+                <div class="item-title">Event Head – Samarpana 2022 | Advisor – Samarpana 2023</div>
+                <div class="item-subtitle">PES University | June 2022 – December 2023</div>
+                
+                <div class="item-description">
+                    Led Samarpana, a prestigious annual event paying tribute to Indian Armed Forces and their families. As Student Event Head for 2022, managed a team of over 1,000 volunteers executing a four-day series including memorial ceremonies, cultural programs, and veteran-led storytelling sessions.
+                </div>
+
+                <h3>Event Highlights</h3>
+                <ul class="item-list">
+                    <li><strong>Distinguished Guests:</strong> Hosted Padma Shri A. S. Kiran Kumar (former ISRO Chairman) as Chief Guest</li>
+                    <li><strong>Veteran Engagement:</strong> Organized talks by Kargil War veteran Capt. Naveen Nagappa and other decorated officers</li>
+                    <li><strong>Community Impact:</strong> Collaborated with organizations to support 120+ martyr families</li>
+                    <li><strong>Scale:</strong> Event attracted 10,000+ attendees, making it one of university's largest events</li>
+                    <li><strong>Legacy:</strong> Continued as Advisor in 2023, ensuring operational excellence and continuity</li>
+                </ul>
+            </div>
+
+            <div class="content-item">
+                <div class="item-title">Executive Member – IEEE Signal Processing & Communication Society</div>
+                <div class="item-subtitle">April 2022 – June 2024</div>
+                <div class="item-description">
+                    Served on executive committee bridging gap between textbook knowledge and real-world practice. Organized national-level workshops, signal processing bootcamps, and IEEE-sponsored hackathons. Led technical outreach programs connecting students with industry professionals in 5G technology and AI-driven communication systems.
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 4: Case Studies -->
+        <div id="casestudies-page" class="page">
+            <h1>Case Studies</h1>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.8;">
+                Strategic analysis of supply chain challenges across diverse industries, demonstrating analytical thinking and problem-solving approach.
+            </p>
+
+            <div class="case-study-item">
+                <div class="case-study-header">
+                    <div class="case-study-icon">🏪</div>
+                    <div class="case-study-company">Seven-Eleven Japan – Responsive Retail Supply Chain</div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Problem Statement & Context</h4>
+                    <div class="case-study-content">
+                        Seven-Eleven Japan needed to micro-match supply with demand while maintaining freshness, reducing waste, and optimizing logistics in dense urban markets.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🔍 Analysis Methodology</h4>
+                    <div class="case-study-content">
+                        Reviewed supply chain structure, delivery scheduling, facility location choices, and inventory management policies.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>💡 Key Findings & Insights</h4>
+                    <ul class="findings-list">
+                        <li>Temperature-controlled, multi-delivery system boosts freshness but increases logistics costs</li>
+                        <li>Market dominance strategy optimizes delivery routes but can create self-competition</li>
+                        <li>Centralized distribution improves efficiency and supplier coordination</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Recommendations Provided</h4>
+                    <ul class="recommendations-list">
+                        <li>Maintain centralized distribution but add backup delivery plans for disruptions</li>
+                        <li>Enhance forecasting accuracy for seasonal demand spikes</li>
+                    </ul>
+                </div>
+
+                <div class="impact-highlight">
+                    <strong>Impact/Outcome:</strong> Would sustain high customer satisfaction, reduce waste, and improve resilience against disruptions.
+                </div>
+            </div>
+
+            <div class="case-study-item">
+                <div class="case-study-header">
+                    <div class="case-study-icon">💻</div>
+                    <div class="case-study-company">Dell – Virtual Integration in Supply Chain</div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Problem Statement & Context</h4>
+                    <div class="case-study-content">
+                        Dell sought to maintain a competitive advantage by replacing large inventories with information and responsiveness.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🔍 Analysis Methodology</h4>
+                    <div class="case-study-content">
+                        Examined direct-to-customer sales, supplier partnerships, and real-time data integration.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>💡 Key Findings & Insights</h4>
+                    <ul class="findings-list">
+                        <li>Real-time demand data reduced inventory holding costs</li>
+                        <li>Long-term supplier relationships improved innovation and quality</li>
+                        <li>Direct sales empowered customers and provided valuable data</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Recommendations Provided</h4>
+                    <ul class="recommendations-list">
+                        <li>Continue investment in predictive analytics to refine customization speed</li>
+                        <li>Expand data sharing with suppliers for better coordination</li>
+                    </ul>
+                </div>
+
+                <div class="impact-highlight">
+                    <strong>Impact/Outcome:</strong> Improved agility, reduced waste, and increased customer loyalty.
+                </div>
+            </div>
+
+            <div class="case-study-item">
+                <div class="case-study-header">
+                    <div class="case-study-icon">🏭</div>
+                    <div class="case-study-company">Polaris Industries – Global Manufacturing Strategy</div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Problem Statement & Context</h4>
+                    <div class="case-study-content">
+                        Polaris needed to balance cost efficiency with responsiveness for global ATV production.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🔍 Analysis Methodology</h4>
+                    <div class="case-study-content">
+                        Compared cost structures, labor rates, and logistics for different manufacturing locations.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>💡 Key Findings & Insights</h4>
+                    <ul class="findings-list">
+                        <li>Monterrey, Mexico offered the best cost–logistics balance</li>
+                        <li>Outsourcing components while insourcing final assembly preserved quality and customization</li>
+                        <li>Total landed cost was more critical than unit cost</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Recommendations Provided</h4>
+                    <ul class="recommendations-list">
+                        <li>Prioritize nearshoring to Mexico for North American markets</li>
+                        <li>Diversify component sourcing for risk management</li>
+                    </ul>
+                </div>
+
+                <div class="impact-highlight">
+                    <strong>Impact/Outcome:</strong> Lower production costs, faster delivery, and improved supply chain resilience.
+                </div>
+            </div>
+
+            <div class="case-study-item">
+                <div class="case-study-header">
+                    <div class="case-study-icon">👗</div>
+                    <div class="case-study-company">Zara – Rapid Fire Fulfilment</div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Problem Statement & Context</h4>
+                    <div class="case-study-content">
+                        Zara aimed to maintain fashion relevance by rapidly adapting to changing trends.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🔍 Analysis Methodology</h4>
+                    <div class="case-study-content">
+                        Assessed sourcing, manufacturing, replenishment frequency, and responsiveness strategies.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>💡 Key Findings & Insights</h4>
+                    <ul class="findings-list">
+                        <li>Local sourcing for uncertain demand products enabled quick trend response</li>
+                        <li>Frequent restocking encouraged repeat store visits and reduced overstock</li>
+                        <li>Responsive supply chain minimized markdowns</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Recommendations Provided</h4>
+                    <ul class="recommendations-list">
+                        <li>Integrate online sales with rapid replenishment systems</li>
+                        <li>Use data-driven demand prediction for better allocation</li>
+                    </ul>
+                </div>
+
+                <div class="impact-highlight">
+                    <strong>Impact/Outcome:</strong> Higher sell-through rates, reduced waste, and sustained competitive edge.
+                </div>
+            </div>
+
+            <div class="case-study-item">
+                <div class="case-study-header">
+                    <div class="case-study-icon">💎</div>
+                    <div class="case-study-company">Blue Nile, Tiffany & Zales – Diamond Retail Strategies</div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Problem Statement & Context</h4>
+                    <div class="case-study-content">
+                        Three major players pursued different business models in the diamond retail market.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🔍 Analysis Methodology</h4>
+                    <div class="case-study-content">
+                        Compared brand positioning, pricing, channel strategy, and supply chain design.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>💡 Key Findings & Insights</h4>
+                    <ul class="findings-list">
+                        <li>Blue Nile's online model offered lower prices via reduced overhead</li>
+                        <li>Tiffany relied on in-store luxury experience to maintain exclusivity</li>
+                        <li>Zales struggled with brand identity in shifting between market segments</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Recommendations Provided</h4>
+                    <ul class="recommendations-list">
+                        <li>Blue Nile: expand into everyday jewelry to broaden market</li>
+                        <li>Tiffany: maintain in-store focus but improve online presence</li>
+                        <li>Zales: refocus on mid-market affordability and strengthen online channel</li>
+                    </ul>
+                </div>
+
+                <div class="impact-highlight">
+                    <strong>Impact/Outcome:</strong> Clearer market positioning and improved profitability for each brand.
+                </div>
+            </div>
+
+            <div class="case-study-item">
+                <div class="case-study-header">
+                    <div class="case-study-icon">🧬</div>
+                    <div class="case-study-company">BioPharma – Global Production Network Optimization</div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Problem Statement & Context</h4>
+                    <div class="case-study-content">
+                        BioPharma needed to reduce costs while managing global currency risks and tariffs.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🔍 Analysis Methodology</h4>
+                    <div class="case-study-content">
+                        Reviewed plant costs, capacity utilization, trade policy impacts, and transport expenses.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>💡 Key Findings & Insights</h4>
+                    <ul class="findings-list">
+                        <li>Some plants became uncompetitive due to currency and tariff changes</li>
+                        <li>Regional production alignment reduced transport costs</li>
+                        <li>Capacity management critical to cost efficiency</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Recommendations Provided</h4>
+                    <ul class="recommendations-list">
+                        <li>Shift production to India for cost savings</li>
+                        <li>Reduce operations in high-cost plants like Japan</li>
+                        <li>Monitor exchange rates regularly</li>
+                    </ul>
+                </div>
+
+                <div class="impact-highlight">
+                    <strong>Impact/Outcome:</strong> Optimized production costs and improved profitability stability.
+                </div>
+            </div>
+
+            <div class="case-study-item">
+                <div class="case-study-header">
+                    <div class="case-study-icon">🚚</div>
+                    <div class="case-study-company">Glovo – Balancing Restaurant Delivery & Quick Commerce</div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Problem Statement & Context</h4>
+                    <div class="case-study-content">
+                        Glovo needed to expand quick commerce while maintaining profitability in its core food delivery business.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🔍 Analysis Methodology</h4>
+                    <div class="case-study-content">
+                        Compared operational models: retail partnerships vs. dark stores.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>💡 Key Findings & Insights</h4>
+                    <ul class="findings-list">
+                        <li>Dark stores offer faster delivery and higher margins but require heavy investment</li>
+                        <li>Retail partnerships provide scale without major capital costs</li>
+                        <li>Ultrafast 10-minute delivery is risky at current cost structure</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Recommendations Provided</h4>
+                    <ul class="recommendations-list">
+                        <li>Focus on core restaurant delivery and selective Q-commerce expansion</li>
+                        <li>Use dark stores in high-density markets only</li>
+                    </ul>
+                </div>
+
+                <div class="impact-highlight">
+                    <strong>Impact/Outcome:</strong> Sustained profitability with controlled expansion risk.
+                </div>
+            </div>
+
+            <div class="case-study-item">
+                <div class="case-study-header">
+                    <div class="case-study-icon">🍽️</div>
+                    <div class="case-study-company">Groupon & Savored – Restaurant Revenue Management</div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Problem Statement & Context</h4>
+                    <div class="case-study-content">
+                        Mr. Chang's restaurant needed to boost off-peak utilization without hurting brand value.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🔍 Analysis Methodology</h4>
+                    <div class="case-study-content">
+                        Compared open-discount daily deals vs. controlled-time discounting.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>💡 Key Findings & Insights</h4>
+                    <ul class="findings-list">
+                        <li>Groupon generated traffic but risked displacing full-paying customers</li>
+                        <li>Savored allowed control over discount timing and table limits</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Recommendations Provided</h4>
+                    <ul class="recommendations-list">
+                        <li>Use Savored for targeted, off-peak discounts</li>
+                        <li>Avoid deep discounting during peak hours</li>
+                    </ul>
+                </div>
+
+                <div class="impact-highlight">
+                    <strong>Impact/Outcome:</strong> Higher profitability, preserved brand image, and better customer targeting.
+                </div>
+            </div>
+
+            <div class="case-study-item">
+                <div class="case-study-header">
+                    <div class="case-study-icon">💼</div>
+                    <div class="case-study-company">Co-op Careers – Industry Insights</div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Problem Statement & Context</h4>
+                    <div class="case-study-content">
+                        Understanding supply chain practices and career paths across industries.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🔍 Analysis Methodology</h4>
+                    <div class="case-study-content">
+                        Reviewed company presentations from Cummins, Dell, Tesla, BMW, Merck, and others.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>💡 Key Findings & Insights</h4>
+                    <ul class="findings-list">
+                        <li>AI-driven forecasting, JIT operations, and sustainability-first sourcing are growing trends</li>
+                        <li>Industry hiring priorities differ between engineering-heavy and cost-efficiency-focused firms</li>
+                        <li>Automation and digital tools are becoming essential skills</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>🎯 Recommendations Provided</h4>
+                    <ul class="recommendations-list">
+                        <li>Build cross-functional skills in data analytics, ERP systems, and supplier management</li>
+                        <li>Network strategically to access hidden job opportunities</li>
+                    </ul>
+                </div>
+
+                <div class="impact-highlight">
+                    <strong>Impact/Outcome:</strong> Better preparedness for high-impact supply chain roles.
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 5: Contact -->
+        <div id="contact-page" class="page">
+            <h1>Contact Me</h1>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.8;">
+                I am always excited to connect with others – whether it's for potential internships, co-op positions, research collaborations, or roles in project management and supply chain. Let's explore how we can work together to create something impactful!
+            </p>
+            
+            <div class="contact-grid">
+                <div class="contact-item" onclick="window.location.href='mailto:alurprasannakumar.y@northeastern.edu'">
+                    <h3>📧 Email</h3>
+                    <a href="mailto:alurprasannakumar.y@northeastern.edu">alurprasannakumar.y@northeastern.edu</a>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Primary contact for all inquiries</p>
+                </div>
+
+                <div class="contact-item" onclick="window.open('https://www.linkedin.com/in/apyashaswi', '_blank')">
+                    <h3>🔗 LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/apyashaswi" target="_blank">linkedin.com/in/apyashaswi</a>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Professional network & updates</p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>📍 Location</h3>
+                    <p>Boston, MA</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Open to relocation for opportunities</p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>💼 Open To</h3>
+                    <p>Co-op Positions<br>
+                    Internships<br>
+                    Research Collaborations<br>
+                    Project Management & Supply Chain Roles</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Send a Message</h3>
+                <form action="https://formspree.io/f/meoznqva" method="POST" id="contactForm" onsubmit="submitContactForm(event)">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="_replyto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Internship Opportunity, Collaboration, etc.">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required placeholder="Tell me about your opportunity, project, or how we can collaborate..."></textarea>
+                    </div>
+                    
+                    <!-- Hidden fields for Formspree -->
+                    <input type="hidden" name="_subject" value="New contact from Yashaswi's Portfolio">
+                    <input type="hidden" name="_next" value="thank-you.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <div style="margin-top: 3rem; padding: 2rem; background-color: var(--background-secondary); border-radius: 10px; text-align: center;">
+                <h3 style="color: var(--text-primary); margin-bottom: 1rem;">Looking Forward</h3>
+                <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.1rem;">
+                    Thank you for taking the time to explore my work and experiences. I'm passionate about solving complex challenges through the intersection of engineering and management. Whether you have an exciting project, research opportunity, or just want to discuss innovative ideas, I'd love to hear from you!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Theme Toggle Functionality
+        function toggleTheme() {
+            const body = document.body;
+            const themeToggle = document.querySelector('.theme-toggle');
+            const currentTheme = body.getAttribute('data-theme');
+            
+            if (currentTheme === 'dark') {
+                body.removeAttribute('data-theme');
+                themeToggle.innerHTML = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeToggle.innerHTML = '☀️';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeToggle = document.querySelector('.theme-toggle');
+            
+            if (savedTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+                themeToggle.innerHTML = '☀️';
+            }
+        }
+
+        // Page Navigation with Smooth Transitions
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            // Hide all pages with fade out
+            pages.forEach(page => {
+                if (page.classList.contains('active')) {
+                    page.style.opacity = '0';
+                    page.style.transform = 'translateY(20px)';
+                    
+                    setTimeout(() => {
+                        page.classList.remove('active');
+                    }, 150);
+                }
+            });
+
+            // Remove active class from nav items
+            navItems.forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Show selected page with fade in
+            setTimeout(() => {
+                const targetPage = document.getElementById(pageId + '-page');
+                targetPage.classList.add('active');
+                
+                setTimeout(() => {
+                    targetPage.style.opacity = '1';
+                    targetPage.style.transform = 'translateY(0)';
+                }, 50);
+            }, 200);
+
+            // Add active class to clicked nav item
+            event.target.classList.add('active');
+
+            // Smooth scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Animate content items when page loads
+            setTimeout(() => {
+                animateContentItems();
+            }, 300);
+        }
+
+        // Project Filtering
+        function filterProjects(category) {
+            const projects = document.querySelectorAll('.project-item');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            
+            // Update filter button states
+            filterBtns.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter projects
+            projects.forEach(project => {
+                const projectCategory = project.getAttribute('data-category');
+                
+                if (category === 'all' || projectCategory === category) {
+                    project.style.display = 'block';
+                    setTimeout(() => {
+                        project.style.opacity = '1';
+                        project.style.transform = 'translateX(0)';
+                    }, 100);
+                } else {
+                    project.style.opacity = '0';
+                    project.style.transform = 'translateX(-20px)';
+                    setTimeout(() => {
+                        project.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Animate content items on scroll
+        function animateContentItems() {
+            const items = document.querySelectorAll('.content-item:not(.visible)');
+            
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('visible');
+                }, index * 100);
+            });
+        }
+
+        // Contact Form Submission
+        function submitContactForm(event) {
+            event.preventDefault();
+            const submitBtn = event.target.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<span class="loading"></span> Sending...';
+            submitBtn.disabled = true;
+            
+            // Allow Formspree to handle the actual submission
+            const formData = new FormData(event.target);
+            
+            fetch(event.target.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    submitBtn.innerHTML = '✓ Message Sent!';
+                    submitBtn.style.background = 'var(--gradient-accent)';
+                    
+                    // Reset form
+                    event.target.reset();
+                    
+                    // Show success message
+                    alert('Thank you! Your message has been sent successfully. I\'ll get back to you soon!');
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            }).catch(error => {
+                submitBtn.innerHTML = '❌ Failed to Send';
+                submitBtn.style.background = '#e74c3c';
+                alert('Sorry, there was an error sending your message. Please try again or contact me directly via email.');
+            }).finally(() => {
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.background = 'var(--gradient-primary)';
+                    submitBtn.disabled = false;
+                }, 3000);
+            });
+        }
+
+        // Download Resume Function
+        function downloadResume() {
+            // Create a simple resume download
+            const resumeContent = `
+Yashaswi Alur Prasannakumar
+Engineering Management Graduate Student
+Boston, MA | alurprasannakumar.y@northeastern.edu
+
+For the complete portfolio and detailed projects, 
+please visit the full website or contact directly.
+            `;
+            
+            const blob = new Blob([resumeContent], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Yashaswi_Alur_Prasannakumar_Resume.txt';
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            // In a real implementation, you would link to an actual PDF resume
+            alert('Resume download started! In a real implementation, this would download your PDF resume.');
+        }
+
+        // Scroll to Top Functionality
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/Hide Scroll to Top Button
+        window.addEventListener('scroll', () => {
+            const scrollTopBtn = document.querySelector('.scroll-to-top');
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateX(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadTheme();
+            animateContentItems();
+            
+            // Observe content items for scroll animations
+            const contentItems = document.querySelectorAll('.content-item');
+            contentItems.forEach(item => observer.observe(item));
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+            });
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                // Close any modals or reset filters
+                const activeFilter = document.querySelector('.filter-btn.active');
+                if (activeFilter && activeFilter.textContent !== 'All Projects') {
+                    document.querySelector('.filter-btn').click();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
